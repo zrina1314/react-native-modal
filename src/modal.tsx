@@ -114,7 +114,7 @@ export type ModalProps = ViewProps & {
   hardwareAccelerated?: boolean;
   onOrientationChange?: OnOrientationChange;
   presentationStyle?: PresentationStyle;
-
+  containerStyle?: StyleProp<ViewStyle>;
   // Default ModalProps Provided
   useNativeDriverForBackdrop?: boolean;
 } & typeof defaultProps;
@@ -781,7 +781,11 @@ export class ReactNativeModal extends React.Component<ModalProps, State> {
       return (
         <View
           pointerEvents="box-none"
-          style={[styles.backdrop, styles.containerBox]}>
+          style={[
+            styles.backdrop,
+            styles.containerBox,
+            this.props.containerStyle,
+          ]}>
           {this.makeBackdrop()}
           {containerView}
         </View>

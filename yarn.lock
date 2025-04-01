@@ -4776,9 +4776,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-modal@workspace:.":
+"react-native-modal-gaw@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-modal@workspace:."
+  resolution: "react-native-modal-gaw@workspace:."
   dependencies:
     "@types/react": "npm:^19.0.10"
     husky: "npm:^3.0.9"
